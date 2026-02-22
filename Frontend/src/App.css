@@ -1,0 +1,242 @@
+/* NAV BAR Hover */
+/* Base link style */
+.nav-underline {
+  position: relative;
+  padding-bottom: 3px;
+}
+
+/* Default underline (hidden unless active or hover) */
+.nav-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  border-radius: 0.25rem;
+  background-color: #3a7694;
+  transition: width 0.3s ease;
+}
+
+/* Active link underline */
+.nav-active::after {
+  width: 100%;
+}
+
+/* Hover underline */
+.nav-underline:hover::after {
+  width: 100%;
+}
+
+/* When hovering any nav item → remove active underline */
+.navbar-nav:hover .nav-active::after {
+  width: 0%;
+}
+
+
+/* ------------------------------------   NAV BAR ---------------------------------------------------- */
+
+#nav {
+  background: transparent;
+  transition: background 0.35s ease;
+}
+
+#nav.nav-bg-white {
+  background: white !important;
+  color: black !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-dark-overlay {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Default — white text */
+.nav-items a {
+  color: white !important;
+  transition: color 0.3s ease;
+}
+
+/* after scroll */
+.nav-items.nav-text-dark a {
+  color: black !important;
+}
+/* Default = White text */
+.nav-items .nav-link {
+  color: white !important;
+  transition: color 0.4s ease;
+}
+
+/* After scroll = Black text */
+.nav-items.nav-text-dark .nav-link {
+  color: black !important;
+}
+
+/* Default dice (white box, dark text) */
+.dice-letter {
+  background: white !important;
+  color: black !important;
+  transition: all 0.3s ease;
+}
+
+/* After scroll (dark box, white text) */
+.nav-bg-white .dice-letter {
+  background: black !important;
+  color: white !important;
+}
+
+
+
+
+/* -----------------------------------   Home Screen ---------------------------------------- */
+.carousel-item img,
+.carousel-item video {
+  height: 100vh;
+  object-fit: cover;
+}
+
+
+/* TOP DESTINATIONS */
+
+/*  Destination.css */
+.destination-card {
+  height: 230px;
+  cursor: pointer;
+}
+
+.destination-card img {
+  transition: transform 0.5s ease;
+}
+
+.destination-card:hover img {
+  transform: scale(1.08);
+}
+
+.destination-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.destination-card:hover .overlay {
+  opacity: 1;
+}
+
+
+
+/* ---------------------------------------  Booking Screen -------------------------------------------- */
+
+/* Default circle */
+.booking-stepper .custom-step .step-button {
+  background-color: #ccc; /* before completion */
+  color: #000;
+}
+
+/* Active step circle */
+.booking-stepper .custom-step.active .step-button {
+  background-color: #004466; /* active step */
+  color: #fff;
+}
+
+/* Completed step circle */
+.booking-stepper .custom-step.completed .step-button {
+  background-color: #004d00; /* green after success */
+  color: #fff;
+}
+
+/* Default connector */
+/* .booking-stepper .stepper-line {
+  background-color: #ccc; 
+} */
+
+/* Completed connector */
+/* .booking-stepper .stepper-line.completed {
+  background-color: #004d00 !important; 
+} */
+
+/* Active step connector */
+/* .booking-stepper .stepper-line.active {
+  background-color: #004466 !important;
+} */
+
+/* Step labels */
+.booking-stepper .step-label {
+  font-weight: 700; /* make all labels bold */
+  color: #000;      /* default inactive color */
+}
+
+/* Make all step labels bold and set default color */
+.booking-stepper .custom-step .stepper-label {
+  font-weight: 700;
+  color: #ccc; /* inactive color */
+}
+
+/* Active step label */
+.booking-stepper .custom-step.active .stepper-label {
+  color: #004466; /* active color */
+}
+
+/* Completed step label */
+.booking-stepper .custom-step.completed .stepper-label {
+  color: #004d00; /* green */
+}
+
+
+
+
+
+
+/* -----------------------------------------    INTERNATION DEstINATION ------------------------------------------- */
+
+.img-box {
+  height: 200px;
+  position: relative;
+  cursor: pointer;
+  /* border: 0; */
+}
+
+.img-box img {
+  height: 100%;
+  width: 100%;
+  object-fit: fit;
+  transition: transform 0.4s ease-in-out;
+}
+
+.img-box .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  text-align: center;
+}
+
+/* Hover Effects */
+.img-box:hover img {
+  transform: scale(1.1);
+}
+
+.img-box:hover .overlay {
+  opacity: 1;
+}
+
+/* Button Animation */
+.img-box .btn {
+  /* opacity: 0; */
+  transform: translateY(10px);
+  transition: 0.4s ease;
+}
+
+.img-box:hover .btn {
+  /* opacity: 1; */
+  transform: translateY(0px);
+}
+
