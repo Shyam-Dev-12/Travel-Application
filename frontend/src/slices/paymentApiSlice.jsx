@@ -5,7 +5,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const paymentApiSlice = createApi({
   reducerPath: "paymentApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "http://localhost:5000/api/payments", // backend endpoint
+    baseUrl: import.meta.env.VITE_API_URL + "/api/payments" // backend endpoint
   }),
   endpoints: (builder) => ({
     // Create a payment intent

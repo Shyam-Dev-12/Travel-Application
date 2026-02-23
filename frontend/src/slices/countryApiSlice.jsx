@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const countryApiSlice = createApi({
   reducerPath: "countryApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "/api/countries" }),
+  baseQuery: fetchBaseQuery({ baseUrl: import.meta.env.VITE_API_URL + "/api/countries" }),
 
   endpoints: (builder) => ({
 
