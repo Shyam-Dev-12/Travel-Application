@@ -7,7 +7,7 @@ const ProtectedRoute = ({ children }) => {
   const toastShown = useRef(false);
 
   // Check user in localStorage
-  const user = localStorage.getItem("user");
+  const user = localStorage.getItem("userInfo");
   const isLoggedIn = user && JSON.parse(user)?._id; // ensures valid user object
 
   useEffect(() => {
