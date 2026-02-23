@@ -86,9 +86,6 @@ useEffect(() => {
 
       </Navbar.Brand>
 
-
-
-
         {/* Toggle for mobile */}
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 

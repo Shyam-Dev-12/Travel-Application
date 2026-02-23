@@ -41,6 +41,17 @@
   transition: background 0.35s ease;
 }
 
+/* FORCE NAVBAR LINK COLORS (Fix Bootstrap conflict) */
+
+#nav .navbar-nav .nav-link {
+  color: white !important;
+  transition: color 0.3s ease;
+}
+
+#nav.nav-bg-white .navbar-nav .nav-link {
+  color: black !important;
+}
+
 #nav.nav-bg-white {
   background: white !important;
   color: black !important;
@@ -52,25 +63,25 @@
 }
 
 /* Default — white text */
-.nav-items a {
+/* .nav-items a {
   color: white !important;
   transition: color 0.3s ease;
-}
+} */
 
 /* after scroll */
-.nav-items.nav-text-dark a {
+/* .nav-items.nav-text-dark a {
   color: black !important;
-}
+} */
 /* Default = White text */
-.nav-items .nav-link {
+/* .nav-items .nav-link {
   color: white !important;
   transition: color 0.4s ease;
-}
+} */
 
 /* After scroll = Black text */
-.nav-items.nav-text-dark .nav-link {
+/* .nav-items.nav-text-dark .nav-link {
   color: black !important;
-}
+} */
 
 /* Default dice (white box, dark text) */
 .dice-letter {
