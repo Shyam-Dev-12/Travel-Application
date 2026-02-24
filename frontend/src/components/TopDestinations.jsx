@@ -31,7 +31,7 @@ export const TopDestinations = () => {
   };
 
   return (
-    <div className="mx-5 mb-5 mt-5 pt-5">
+    <div className="mx-5 mb-5 mt">
       <h3 className="fw-bold mb-3 text-center">Explore the Best Top Destinations</h3>
       <p className="text-center text-muted mb-5">
         Unlimited Choices | Best Prices | Happy Memories | Hot Deals

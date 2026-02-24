@@ -4,7 +4,8 @@ import { Carousel } from "react-bootstrap";
 export const HomeCarousel = () => {
   const slides = [
 
-    { type: "video", src:"https://res.cloudinary.com/dlyxya9am/image/upload/v1771695241/HS_Img_1_d59uji.jpg" },
+    { type: "video", src:"https://res.cloudinary.com/dlyxya9am/video/upload/v1771700556/HS_V1_sqgzj6.mp4" },
+    { type: "image", src:"https://res.cloudinary.com/dlyxya9am/image/upload/v1771695241/HS_Img_1_d59uji.jpg" },
     { type: "image", src:"https://res.cloudinary.com/dlyxya9am/image/upload/v1771695289/HS_Img_2_qt79ho.jpg" },
     { type: "image", src:"https://res.cloudinary.com/dlyxya9am/image/upload/v1771695386/HS_Img_3_e3wmqf.jpg" },
     { type: "image", src:"https://res.cloudinary.com/dlyxya9am/image/upload/v1771695303/HS_Img_4_srilde.jpg" },
