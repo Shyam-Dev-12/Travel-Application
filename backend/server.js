@@ -25,13 +25,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-const allowedOrigins = [
-  "http://localhost:5173",   // Vite local
-  "https://travel-application-black.vercel.app"
-];
-
 app.use(cors({
-    origin:  allowedOrigins, // allow your frontend
+    origin: "*", // allow your frontend
     credentials: true,               // allow cookies if needed
 }));
 
