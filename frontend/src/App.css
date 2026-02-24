@@ -1,12 +1,40 @@
-/* ================= NAVBAR UNDERLINE EFFECT ================= */
+/* ================= NAVBAR CORE ================= */
 
-/* Base link style */
+#nav {
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  transition: background 0.35s ease;
+  z-index: 9999;
+}
+
+/* FORCE LINK COLORS (CRITICAL FIX) */
+#nav .nav-link {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+/* Hover */
+#nav .nav-link:hover {
+  color: #3a7694 !important;
+}
+
+/* After scroll */
+#nav.nav-bg-white {
+  background: white !important;
+}
+
+/* After scroll link color */
+#nav.nav-bg-white .nav-link {
+  color: black !important;
+}
+
+/* ================= UNDERLINE EFFECT ================= */
+
 .nav-underline {
   position: relative;
   padding-bottom: 3px;
 }
 
-/* Default underline */
 .nav-underline::after {
   content: "";
   position: absolute;
@@ -19,49 +47,13 @@
   transition: width 0.3s ease;
 }
 
-/* Active link */
 .nav-active::after {
   width: 100%;
 }
 
-/* Hover */
 .nav-underline:hover::after {
   width: 100%;
 }
-
-
-/* ================= NAVBAR CORE ================= */
-
-#nav {
-  background: rgba(0, 0, 0, 0.45);   /* Glass dark navbar */
-  backdrop-filter: blur(6px);
-  transition: background 0.35s ease;
-  z-index: 9999;
-}
-
-/* Nav links */
-#nav .navbar-nav .nav-link {
-  color: white !important;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.6);  /* Visibility on carousel */
-  transition: color 0.3s ease;
-}
-
-/* After scroll */
-#nav.nav-bg-white {
-  background: white !important;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-#nav.nav-bg-white .navbar-nav .nav-link {
-  color: black !important;
-  text-shadow: none;
-}
-
-/* Optional overlay (keep if you use it) */
-.navbar-dark-overlay {
-  background-color: rgba(0, 0, 0, 0.5) !important;
-}
-
 
 /* ================= DICE LOGO ================= */
 
