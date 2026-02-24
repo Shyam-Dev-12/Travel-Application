@@ -64,7 +64,7 @@ export const NavBar = () => {
           </span>
         </Navbar.Brand>
 
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" className="justify-content-end" />
 
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav className="align-items-center fs-6 fw-bold nav-items">
