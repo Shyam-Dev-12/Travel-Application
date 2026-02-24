@@ -1,11 +1,13 @@
 /* NAV BAR Hover */
+/* ================= NAVBAR UNDERLINE EFFECT ================= */
+
 /* Base link style */
 .nav-underline {
   position: relative;
   padding-bottom: 3px;
 }
 
-/* Default underline (hidden unless active or hover) */
+/* Default underline */
 .nav-underline::after {
   content: "";
   position: absolute;
@@ -18,79 +20,65 @@
   transition: width 0.3s ease;
 }
 
-/* Active link underline */
+/* Active link */
 .nav-active::after {
   width: 100%;
 }
 
-/* Hover underline */
+/* Hover */
 .nav-underline:hover::after {
   width: 100%;
 }
 
-/* When hovering any nav item → remove active underline */
-.navbar-nav:hover .nav-active::after {
+/* ❌ REMOVED (causes flicker & mobile issues) */
+/* .navbar-nav:hover .nav-active::after {
   width: 0%;
-}
+} */
 
 
-/* ------------------------------------   NAV BAR ---------------------------------------------------- */
+/* ================= NAVBAR CORE ================= */
 
 #nav {
-  background: transparent;
+  background: rgba(0, 0, 0, 0.45);   /* FIXED visibility */
+  backdrop-filter: blur(6px);         /* Smooth glass effect */
   transition: background 0.35s ease;
+  z-index: 9999;                     /* FIXED layering issue */
 }
 
-/* FORCE NAVBAR LINK COLORS (Fix Bootstrap conflict) */
-
+/* FORCE NAVBAR LINK COLORS */
 #nav .navbar-nav .nav-link {
   color: white !important;
   transition: color 0.3s ease;
 }
 
+/* After scroll */
 #nav.nav-bg-white .navbar-nav .nav-link {
   color: black !important;
 }
 
+/* Navbar after scroll */
 #nav.nav-bg-white {
   background: white !important;
   color: black !important;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
+/* Optional overlay */
 .navbar-dark-overlay {
   background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
-/* Default — white text */
-/* .nav-items a {
-  color: white !important;
-  transition: color 0.3s ease;
-} */
 
-/* after scroll */
-/* .nav-items.nav-text-dark a {
-  color: black !important;
-} */
-/* Default = White text */
-/* .nav-items .nav-link {
-  color: white !important;
-  transition: color 0.4s ease;
-} */
+/* ================= DICE LOGO ================= */
 
-/* After scroll = Black text */
-/* .nav-items.nav-text-dark .nav-link {
-  color: black !important;
-} */
-
-/* Default dice (white box, dark text) */
+/* Default dice */
 .dice-letter {
   background: white !important;
   color: black !important;
   transition: all 0.3s ease;
 }
 
-/* After scroll (dark box, white text) */
+/* After scroll */
 .nav-bg-white .dice-letter {
   background: black !important;
   color: white !important;
