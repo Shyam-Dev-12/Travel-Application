@@ -37,15 +37,17 @@
 /* ------------------------------------ NAV BAR ------------------------------------ */
 
 /* DEFAULT STATE → DARK OVERLAY */
-#nav {
+/*#nav {
   background-color: rgba(0, 0, 0, 0.5);
   transition: background-color 0.35s ease, box-shadow 0.35s ease;
-  z-index: 9999;   /* ← reduce from insane value */
-  position: fixed; /* ← CRITICAL */
+  z-index: 9999;  
+  position: fixed;
   width: 100%;
   top: 0;
+} */
+#nav {
+  background: red !important;
 }
-
 /* FORCE NAVBAR LINK COLORS */
 #nav .navbar-nav .nav-link {
   color: white !important;
@@ -91,7 +93,8 @@
 .carousel,
 .carousel-inner,
 .carousel-item {
-  z-index: 0;
+  position: relative;
+  z-index: 1;
 }
 
 
