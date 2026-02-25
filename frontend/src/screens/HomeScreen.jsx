@@ -27,34 +27,22 @@ export const HomeScreen = () => {
   return (
     <>
       <div>
-        <Container fluid className="p-0">
+        <Container fluid>
             <NavBar />
               {/* SEARCH BAR */}
             <div>
-              <div id="home-carousel" style={{ position: "relative", zIndex: 1 }}>
+              <div id="home-carousel" style={{ position: "absolute", inset: 0, zIndex: 0 }}>
                 <HomeCarousel />
-
-  <div
-    style={{
-      position: "absolute",
-      inset: 0,
-      backgroundColor: "rgba(0,0,0,0.5)",
-      zIndex: 2,
-      pointerEvents: "none"
-    }}
-  />
-
-  <div
-    className="position-absolute w-100 d-flex flex-column align-items-center justify-content-center"
-    style={{
-      top: 0,
-      zIndex: 3,
-    }}
-  >
-    <SearchBar scrollToDestinations={scrollToDestinations} />
-  </div>
-</div>
-          </div>  
+              </div>
+                      {/* Dark overlay on carousel (optional; increases text visibility) */}
+              <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.5)", zIndex: 1 }} />
+                      {/* Content on top of carousel */}
+              <div className="position-relative d-flex flex-column align-items-center justify-content-start mt-0 pt-0"
+                    style={{ zIndex: 2,}} // paddingTop to leave space for navbar
+              >
+              <SearchBar scrollToDestinations={scrollToDestinations} />
+              </div>
+            </div>  
         </Container>
           
       </div>

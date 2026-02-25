@@ -5,7 +5,7 @@
   padding-bottom: 3px;
 }
 
-/* Default underline */
+/* Default underline (hidden unless active or hover) */
 .nav-underline::after {
   content: "";
   position: absolute;
@@ -28,56 +28,74 @@
   width: 100%;
 }
 
-/* Remove active underline on hover */
+/* When hovering any nav item → remove active underline */
 .navbar-nav:hover .nav-active::after {
   width: 0%;
 }
 
 
-/* ------------------------------------ NAV BAR ------------------------------------ */
+/* ------------------------------------   NAV BAR ---------------------------------------------------- */
 
-/* DEFAULT STATE → DARK OVERLAY */
 #nav {
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: background-color 0.35s ease, box-shadow 0.35s ease;
-  z-index: 9999;   /* ← reduce from insane value */
-  position: fixed; /* ← CRITICAL */
-  width: 100%;
-  top: 0;
+  background: transparent;
+  transition: background 0.35s ease;
 }
 
-/* FORCE NAVBAR LINK COLORS */
+/* FORCE NAVBAR LINK COLORS (Fix Bootstrap conflict) */
+
 #nav .navbar-nav .nav-link {
   color: white !important;
   transition: color 0.3s ease;
 }
 
-/* SCROLL STATE → WHITE */
-#nav.nav-bg-white {
-  background-color: white !important;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* TEXT COLOR AFTER SCROLL */
 #nav.nav-bg-white .navbar-nav .nav-link {
   color: black !important;
 }
 
+#nav.nav-bg-white {
+  background: white !important;
+  color: black !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
 
-/* LOGO DICE EFFECT */
+.navbar-dark-overlay {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
 
-/* Default dice */
+/* Default — white text */
+/* .nav-items a {
+  color: white !important;
+  transition: color 0.3s ease;
+} */
+
+/* after scroll */
+/* .nav-items.nav-text-dark a {
+  color: black !important;
+} */
+/* Default = White text */
+/* .nav-items .nav-link {
+  color: white !important;
+  transition: color 0.4s ease;
+} */
+
+/* After scroll = Black text */
+/* .nav-items.nav-text-dark .nav-link {
+  color: black !important;
+} */
+
+/* Default dice (white box, dark text) */
 .dice-letter {
   background: white !important;
   color: black !important;
   transition: all 0.3s ease;
 }
 
-/* After scroll */
-#nav.nav-bg-white .dice-letter {
+/* After scroll (dark box, white text) */
+.nav-bg-white .dice-letter {
   background: black !important;
   color: white !important;
 }
+
 
 
 
