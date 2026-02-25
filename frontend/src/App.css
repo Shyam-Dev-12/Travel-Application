@@ -40,6 +40,7 @@
 #nav {
   background-color: rgba(0, 0, 0, 0.5);
   transition: background-color 0.35s ease, box-shadow 0.35s ease;
+  z-index: 9999;
 }
 
 /* FORCE NAVBAR LINK COLORS */
@@ -76,11 +77,14 @@
 }
 
 
+
 /* -----------------------------------   Home Screen ---------------------------------------- */
 .carousel-item img,
 .carousel-item video {
   height: 100vh;
   object-fit: cover;
+  z-index: 1;
+  position: relative;
 }
 
 
