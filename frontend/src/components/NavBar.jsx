@@ -39,9 +39,9 @@ export const NavBar = () => {
   }, []);
 
   return (
-    <Navbar id="nav" expand="md" className="py-3 fixed-top">
+    <Navbar id="nav" expand="md" className="py-3 fixed-top navbar-dark-overlay">
       <Container fluid>
-        <Navbar.Brand style={{ color: "white" }}  className="d-flex flex-column align-items-center">
+        <Navbar.Brand className="d-flex flex-column align-items-center">
 
           <div className="d-flex gap-1">
             {["S", "K", "W", "I", "N", "G"].map((char, index) => (
@@ -68,7 +68,7 @@ export const NavBar = () => {
 
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav className="align-items-center fs-6 fw-bold nav-items">
-            <Nav.Link style={{ color: "white" }} className="nav-underline nav-active" onClick={() => navigate("/")}>Home</Nav.Link>
+            <Nav.Link className="nav-underline nav-active" onClick={() => navigate("/")}>Home</Nav.Link>
             <Nav.Link className="nav-underline" onClick={() => navigate("/about")}>About Us</Nav.Link>
             <Nav.Link className="nav-underline" onClick={() => navigate("/contact")}>Contact</Nav.Link>
             <Nav.Link className="nav-underline" onClick={() => navigate("/packages")}>Package</Nav.Link>
