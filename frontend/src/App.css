@@ -46,15 +46,6 @@
   top: 0;
 }
 
-#nav .nav-link {
-  color: white !important;
-  opacity: 1 !important;
-}
-
-.navbar-brand {
-  color: white !important;
-}
-
 /* FORCE NAVBAR LINK COLORS */
 #nav .navbar-nav .nav-link {
   color: white !important;
@@ -95,13 +86,6 @@
 .carousel-item video {
   height: 100vh;
   object-fit: cover;
-}
-
-.carousel,
-.carousel-inner,
-.carousel-item {
-  position: relative;
-  z-index: 1;
 }
 
 
