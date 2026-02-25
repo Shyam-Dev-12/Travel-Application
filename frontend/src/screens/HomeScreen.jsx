@@ -45,11 +45,10 @@ export const HomeScreen = () => {
                 />
 
                 <div
-                  className="position-absolute w-100 d-flex flex-column align-items-center"
+                  className="position-absolute w-100 d-flex flex-column align-items-center justify-content-center"
                   style={{
                     top: 0,
                     zIndex: 2,
-                    paddingTop: "80px"
                   }}
                 >
                 <SearchBar scrollToDestinations={scrollToDestinations} />
