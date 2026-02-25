@@ -39,7 +39,7 @@ export const NavBar = () => {
   }, []);
 
   return (
-    <Navbar id="nav" expand="md" className="py-3 fixed-top navbar-dark-overlay">
+    <Navbar id="nav" expand="md" className="py-3 fixed-top">
       <Container fluid>
         <Navbar.Brand className="d-flex flex-column align-items-center">
 
