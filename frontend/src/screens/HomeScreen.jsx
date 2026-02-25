@@ -39,7 +39,8 @@ export const HomeScreen = () => {
                     position: "absolute",
                     inset: 0,
                     backgroundColor: "rgba(0,0,0,0.5)",
-                    zIndex: 1
+                    zIndex: 1,
+                    pointerEvents: "none"
                   }}
                 />
 
@@ -48,6 +49,7 @@ export const HomeScreen = () => {
                   style={{
                     top: 0,
                     zIndex: 2,
+                    paddingTop: "80px"
                   }}
                 >
                 <SearchBar scrollToDestinations={scrollToDestinations} />
