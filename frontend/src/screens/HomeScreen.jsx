@@ -31,29 +31,29 @@ export const HomeScreen = () => {
             <NavBar />
               {/* SEARCH BAR */}
             <div>
-              <div id="home-carousel" style={{ position: "relative" }}>
-                <HomeCarousel />
+              <div id="home-carousel" style={{ position: "relative", zIndex: 1 }}>
+  <HomeCarousel />
 
-                <div
-                  style={{
-                    position: "absolute",
-                    inset: 0,
-                    backgroundColor: "rgba(0,0,0,0.5)",
-                    zIndex: 1,
-                    pointerEvents: "none"
-                  }}
-                />
+  <div
+    style={{
+      position: "absolute",
+      inset: 0,
+      backgroundColor: "rgba(0,0,0,0.5)",
+      zIndex: 2,
+      pointerEvents: "none"
+    }}
+  />
 
-                <div
-                  className="position-absolute w-100 d-flex flex-column align-items-center justify-content-center"
-                  style={{
-                    top: 0,
-                    zIndex: 2,
-                  }}
-                >
-                <SearchBar scrollToDestinations={scrollToDestinations} />
-              </div>
-            </div>
+  <div
+    className="position-absolute w-100 d-flex flex-column align-items-center justify-content-center"
+    style={{
+      top: 0,
+      zIndex: 3,
+    }}
+  >
+    <SearchBar scrollToDestinations={scrollToDestinations} />
+  </div>
+</div>
           </div>  
         </Container>
           
