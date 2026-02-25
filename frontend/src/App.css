@@ -40,7 +40,7 @@
 #nav {
   background-color: rgba(0, 0, 0, 0.5);
   transition: background-color 0.35s ease, box-shadow 0.35s ease;
-  z-index: 9999;
+  z-index: 99999;
 }
 
 /* FORCE NAVBAR LINK COLORS */
