@@ -32,7 +32,7 @@ export const HomeScreen = () => {
               {/* SEARCH BAR */}
             <div>
               <div id="home-carousel" style={{ position: "relative", zIndex: 1 }}>
-  <HomeCarousel />
+                <HomeCarousel />
 
   <div
     style={{

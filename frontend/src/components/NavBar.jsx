@@ -66,7 +66,7 @@ export const NavBar = () => {
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
-        <Navbar id="basic-navbar-nav" className="justify-content-end">
+        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav className="align-items-center fs-6 fw-bold nav-items">
             <Nav.Link className="nav-underline nav-active" onClick={() => navigate("/")}>Home</Nav.Link>
             <Nav.Link className="nav-underline" onClick={() => navigate("/about")}>About Us</Nav.Link>
@@ -104,7 +104,7 @@ export const NavBar = () => {
               </Button>
             )}
           </Nav>
-        </Navbar>
+        </Navbar.Collapse>
       </Container>
     </Navbar>
   );
