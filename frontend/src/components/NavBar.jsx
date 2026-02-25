@@ -41,7 +41,7 @@ export const NavBar = () => {
   return (
     <Navbar id="nav" expand="md" className="py-3 fixed-top navbar-dark-overlay">
       <Container fluid>
-        <Navbar.Brand className="d-flex flex-column align-items-center ms-5">
+        <Navbar.Brand className="d-flex flex-column align-items-center">
 
           <div className="d-flex gap-1">
             {["S", "K", "W", "I", "N", "G"].map((char, index) => (
@@ -64,7 +64,7 @@ export const NavBar = () => {
           </span>
         </Navbar.Brand>
 
-        <Navbar.Toggle aria-controls="basic-navbar-nav" className="justify-content-end" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav className="align-items-center fs-6 fw-bold nav-items">
