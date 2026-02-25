@@ -36,7 +36,7 @@ export const HomeScreen = () => {
                  {/* Dark overlay on carousel (optional; increases text visibility) */}
                 <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0,0,0,0.5)", }} />
                 <div className="position-absolute w-100 d-flex flex-column align-items-center"
-                      style={{ top: 0, zIndex: 2, paddingTop: "80px"}} >
+                      style={{ top: 0, zIndex: 2,}} >
                 <SearchBar scrollToDestinations={scrollToDestinations} />
               </div>
                 
