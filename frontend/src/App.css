@@ -37,17 +37,24 @@
 /* ------------------------------------ NAV BAR ------------------------------------ */
 
 /* DEFAULT STATE → DARK OVERLAY */
-/*#nav {
+#nav {
   background-color: rgba(0, 0, 0, 0.5);
   transition: background-color 0.35s ease, box-shadow 0.35s ease;
-  z-index: 9999;  
-  position: fixed;
+  z-index: 9999;   /* ← reduce from insane value */
+  position: fixed; /* ← CRITICAL */
   width: 100%;
   top: 0;
-} */
-#nav {
-  background: red !important;
 }
+
+#nav .nav-link {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+.navbar-brand {
+  color: white !important;
+}
+
 /* FORCE NAVBAR LINK COLORS */
 #nav .navbar-nav .nav-link {
   color: white !important;
