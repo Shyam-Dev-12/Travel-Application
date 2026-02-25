@@ -39,7 +39,7 @@ export const NavBar = () => {
   }, []);
 
   return (
-    <Navbar collapseOnSelect id="nav" expand="md" className="py-3 fixed-top">
+    <Navbar id="nav" expand="md" className="py-3 fixed-top">
       <Container fluid>
         <Navbar.Brand className="d-flex flex-column align-items-center">
 
