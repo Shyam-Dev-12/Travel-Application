@@ -38,35 +38,15 @@ export const NavBar = () => {
   };
 
 
-// useEffect(() => {
-//   const nav = document.getElementById("nav");
-//   const navItems = document.querySelector(".nav-items");
-
-//   const handleScroll = () => {
-//     if (window.scrollY > 0) {
-//       nav.classList.add("nav-bg-white");
-//       navItems.classList.add("nav-text-dark");
-
-//     } else {
-//       nav.classList.remove("nav-bg-white");
-//       navItems.classList.remove("nav-text-dark");
-//     }
-//   };
-
-//   window.addEventListener("scroll", handleScroll);
-//   return () => window.removeEventListener("scroll", handleScroll);
-// }, []);
- 
 useEffect(() => {
   const nav = document.getElementById("nav");
   const navItems = document.querySelector(".nav-items");
-
-  if (!nav || !navItems) return;
 
   const handleScroll = () => {
     if (window.scrollY > 0) {
       nav.classList.add("nav-bg-white");
       navItems.classList.add("nav-text-dark");
+
     } else {
       nav.classList.remove("nav-bg-white");
       navItems.classList.remove("nav-text-dark");
@@ -76,11 +56,9 @@ useEffect(() => {
   window.addEventListener("scroll", handleScroll);
   return () => window.removeEventListener("scroll", handleScroll);
 }, []);
-
-
+ 
   return (
-    <Navbar id="nav" expand="md" className=" py-3 fixed-top navbar-dark-overlay" bg="light"
-  variant="light">
+    <Navbar id="nav" expand="md" className=" py-3 fixed-top navbar-dark-overlay">
       <Container fluid className="mx-5 px-5">
         {/* Brand */}
       <Navbar.Brand className="d-flex flex-column align-items-center">
