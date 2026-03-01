@@ -1,11 +1,11 @@
-/* ------------------------------------ NAVBAR ------------------------------------ */
-
-/* Base nav underline animation */
+/* NAV BAR Hover */
+/* Base link style */
 .nav-underline {
   position: relative;
   padding-bottom: 3px;
 }
 
+/* Default underline (hidden unless active or hover) */
 .nav-underline::after {
   content: "";
   position: absolute;
@@ -18,78 +18,75 @@
   transition: width 0.3s ease;
 }
 
+/* Active link underline */
 .nav-active::after {
   width: 100%;
 }
 
+/* Hover underline */
 .nav-underline:hover::after {
   width: 100%;
 }
 
+/* When hovering any nav item → remove active underline */
 .navbar-nav:hover .nav-active::after {
   width: 0%;
 }
 
-/* Navbar container */
+
+/* ------------------------------------   NAV BAR ---------------------------------------------------- */
+
 #nav {
   background: transparent;
   transition: background 0.35s ease;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 2000; /* Above carousel and content */
 }
 
-/* Navbar background after scroll */
 #nav.nav-bg-white {
   background: white !important;
   color: black !important;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* Navbar link colors */
-#nav .navbar-nav .nav-link {
-  color: white !important;
-  transition: color 0.3s ease;
-}
-
-#nav.nav-bg-white .navbar-nav .nav-link {
-  color: black !important;
-}
-
-/* Mobile menu (collapsed) fix */
-#nav .navbar-collapse {
-  background-color: rgba(0,0,0,0.8); /* dark overlay for mobile menu */
-  padding: 1rem;
-  z-index: 1050; /* ensure above content */
-}
-
-#nav.nav-bg-white .navbar-collapse {
-  background-color: white !important; /* after scroll */
-}
-
-/* When collapsed menu is open */
-#nav .navbar-collapse.show .nav-link {
-  color: white !important; /* links visible on dark overlay */
-}
-
-/* Navbar dark overlay (for desktop) */
 .navbar-dark-overlay {
   background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
-/* Dice letters */
+/* Default — white text */
+.nav-items a {
+  color: white !important;
+  transition: color 0.3s ease;
+}
+
+/* after scroll */
+.nav-items.nav-text-dark a {
+  color: black !important;
+}
+/* Default = White text */
+.nav-items .nav-link {
+  color: white !important;
+  transition: color 0.4s ease;
+}
+
+/* After scroll = Black text */
+.nav-items.nav-text-dark .nav-link {
+  color: black !important;
+}
+
+/* Default dice (white box, dark text) */
 .dice-letter {
   background: white !important;
   color: black !important;
   transition: all 0.3s ease;
 }
 
+/* After scroll (dark box, white text) */
 .nav-bg-white .dice-letter {
   background: black !important;
   color: white !important;
 }
+
+
+
 
 /* -----------------------------------   Home Screen ---------------------------------------- */
 .carousel-item img,
@@ -97,6 +94,7 @@
   height: 100vh;
   object-fit: cover;
 }
+
 
 
 /* TOP DESTINATIONS */
